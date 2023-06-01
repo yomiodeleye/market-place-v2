@@ -1,10 +1,10 @@
-import { redirect } from "next/navigation"
+import {redirect} from "next/navigation"
 
-import { authOptions } from "@/lib/auth"
-import { getCurrentUser } from "@/lib/session"
-import { stripe } from "@/lib/stripe"
-import { getUserSubscriptionPlan } from "@/lib/subscription"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import {authOptions} from "@/lib/auth"
+import {getCurrentUser} from "@/lib/session"
+import {stripe} from "@/lib/stripe"
+import {getUserSubscriptionPlan} from "@/lib/subscription"
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert"
 import {
   Card,
   CardContent,
@@ -12,10 +12,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { BillingForm } from "@/components/billing-form"
-import { DashboardHeader } from "@/components/header"
-import { Icons } from "@/components/icons"
-import { DashboardShell } from "@/components/shell"
+import {BillingForm} from "@/components/billing-form"
+import {DashboardHeader} from "@/components/dashboard-header"
+import {Icons} from "@/components/icons"
+import {DashboardShell} from "@/components/shell"
 
 export const metadata = {
   title: "Billing",
@@ -48,7 +48,7 @@ export default async function BillingPage() {
       />
       <div className="grid gap-8">
         <Alert className="!pl-14">
-          <Icons.warning />
+          <Icons.warning/>
           <AlertTitle>This is a demo app.</AlertTitle>
           <AlertDescription>
             Taxonomy app is a demo app using a Stripe test environment. You can
