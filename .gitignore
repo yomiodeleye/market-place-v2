@@ -30,6 +30,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+.vscode
+.contentlayer
+
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
@@ -58,3 +62,4 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
