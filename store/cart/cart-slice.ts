@@ -1,5 +1,5 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {tCart} from "@/types/cart";
+import { createSlice } from '@reduxjs/toolkit'
+import { tCart } from '@/types/cart'
 
 const initialState: tCart = {
   items: [],
@@ -11,17 +11,17 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     replaceCart(state, action) {
-      state.totalQuantity = action.payload.totalQuantity;
-      state.items = action.payload.items;
+      state.totalQuantity = action.payload.totalQuantity
+      state.items = action.payload.items
     },
     addItemToCart(state, action) {
-      const newItem = action.payload;
+      const newItem = action.payload
       const existingItem: any = state.items.find(
-        (item: any) => item.id === newItem.id
-      );
-      const itemQuantity = newItem.quantity || 1;
-      state.totalQuantity += itemQuantity;
-      state.changed = true;
+        (item: any) => item.id === newItem.id,
+      )
+      const itemQuantity = newItem.quantity || 1
+      state.totalQuantity += itemQuantity
+      state.changed = true
       if (!existingItem) {
         state.items.push({
           id: newItem.id,
@@ -31,57 +31,57 @@ const cartSlice = createSlice({
           name: newItem.title,
           image: newItem.image,
           slug: newItem.slug,
-        });
+        })
       } else {
-        existingItem.quantity++;
-        existingItem.totalPrice += newItem.price;
+        existingItem.quantity++
+        existingItem.totalPrice += newItem.price
       }
     },
     increaseItemFromCart(state, action) {
-      const id = action.payload;
-      const existingItem: any = state.items.find((item) => item.id === id);
-      state.totalQuantity--;
-      state.changed = true;
+      const id = action.payload
+      const existingItem: any = state.items.find((item) => item.id === id)
+      state.totalQuantity--
+      state.changed = true
       if (existingItem.quantity === 1) {
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item) => item.id !== id)
       } else {
-        existingItem.quantity--;
-        existingItem.totalPrice -= existingItem.price;
+        existingItem.quantity--
+        existingItem.totalPrice -= existingItem.price
       }
     },
     removeItemFromCart(state, action) {
-      const id = action.payload;
+      const id = action.payload
 
-      state.changed = true;
-      state.items = state.items.filter((item) => item.id !== id);
+      state.changed = true
+      state.items = state.items.filter((item) => item.id !== id)
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0
-      );
+        0,
+      )
     },
     updateItemQuantityFromCart(state, action) {
-      const newQuantity = action.payload;
+      const newQuantity = action.payload
       // @ts-ignore
       state.items = state.items.map((item) => ({
         ...item,
         quantity: newQuantity[item.id] || item.quantity,
         // @ts-ignore
         totalPrice: item.price * newQuantity[item.id] || item.price,
-      }));
+      }))
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0
-      );
-      state.changed = true;
+        0,
+      )
+      state.changed = true
     },
     clearAllFromCart(state) {
-      state.changed = true;
-      state.items = [];
-      state.totalQuantity = 0;
+      state.changed = true
+      state.items = []
+      state.totalQuantity = 0
     },
   },
-});
+})
 
-export const cartActions = cartSlice.actions;
+export const cartActions = cartSlice.actions
 
-export default cartSlice;
+export default cartSlice

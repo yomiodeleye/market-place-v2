@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { Post } from "@prisma/client"
+import Link from 'next/link'
+import { Post } from '@prisma/client'
 
-import { formatDate } from "@/lib/utils"
-import { Skeleton } from "@/components/ui/skeleton"
-import { PostOperations } from "@/components/post-operations"
+import { formatDate } from '@/lib/utils'
+import { Skeleton } from '@/components/ui/skeleton'
+import { PostOperations } from '@/components/post-operations'
 
 interface PostItemProps {
-  post: Pick<Post, "id" | "title" | "published" | "createdAt">
+  post: Pick<Post, 'id' | 'title' | 'published' | 'createdAt'>
 }
 
 export function PostItem({ post }: PostItemProps) {
@@ -20,7 +20,7 @@ export function PostItem({ post }: PostItemProps) {
           {post.title}
         </Link>
         <div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             {formatDate(post.createdAt?.toDateString())}
           </p>
         </div>

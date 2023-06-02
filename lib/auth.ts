@@ -1,13 +1,13 @@
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import { NextAuthOptions } from "next-auth"
-import CognitoProvider from "next-auth/providers/cognito"
-import EmailProvider from "next-auth/providers/email"
-import GitHubProvider from "next-auth/providers/github"
-import { Client } from "postmark"
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import { NextAuthOptions } from 'next-auth'
+import CognitoProvider from 'next-auth/providers/cognito'
+import EmailProvider from 'next-auth/providers/email'
+import GitHubProvider from 'next-auth/providers/github'
+import { Client } from 'postmark'
 
-import { env } from "@/env.mjs"
-import { siteConfig } from "@/config/site"
-import { db } from "@/lib/db"
+import { env } from '@/env.mjs'
+import { siteConfig } from '@/config/site'
+import { db } from '@/lib/db'
 
 const postmarkClient = new Client(env.POSTMARK_API_TOKEN)
 
@@ -17,17 +17,16 @@ export const authOptions: NextAuthOptions = {
   // @see https://github.com/prisma/prisma/issues/16117
   adapter: PrismaAdapter(db as any),
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
   },
   pages: {
-    signIn: "/login",
+    signIn: '/login',
   },
   providers: [
     CognitoProvider({
       clientId: process.env.COGNITO_CLIENT_ID,
       clientSecret: process.env.COGNITO_CLIENT_SECRET,
       issuer: process.env.COGNITO_ISSUER,
-      
     }),
 
     GitHubProvider({
@@ -50,7 +49,7 @@ export const authOptions: NextAuthOptions = {
           ? env.POSTMARK_SIGN_IN_TEMPLATE
           : env.POSTMARK_ACTIVATION_TEMPLATE
         if (!templateId) {
-          throw new Error("Missing template id")
+          throw new Error('Missing template id')
         }
 
         const result = await postmarkClient.sendEmailWithTemplate({
@@ -65,8 +64,8 @@ export const authOptions: NextAuthOptions = {
             {
               // Set this to prevent Gmail from threading emails.
               // See https://stackoverflow.com/questions/23434110/force-emails-not-to-be-grouped-into-conversations/25435722.
-              Name: "X-Entity-Ref-ID",
-              Value: new Date().getTime() + "",
+              Name: 'X-Entity-Ref-ID',
+              Value: new Date().getTime() + '',
             },
           ],
         })

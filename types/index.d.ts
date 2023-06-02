@@ -1,23 +1,23 @@
-import {User} from "@prisma/client"
-import type {Icon} from "lucide-react"
+import { User } from '@prisma/client'
+import type { Icon } from 'lucide-react'
 
-import {Icons} from "@/components/icons"
+import { Icons } from '@/components/icons'
 
 export type SubNavItem = {
-  id: string,
-  submenuTitle: string,
-  submenuPath: string,
+  id: string
+  submenuTitle: string
+  submenuPath: string
 }
 
 export type MegamenuItem = {
-  id: string,
-  megamenuTitle: string,
-  megamenuPath: string,
+  id: string
+  megamenuTitle: string
+  megamenuPath: string
 }
 
 export type Megamenu = {
-  id: string,
-  groupName: string,
+  id: string
+  groupName: string
   groupItems: MegamenuItem[]
 }
 
@@ -26,8 +26,8 @@ export type NavItem = {
   title: string
   href: string
   disabled?: boolean
-  holderCName?: string,
-  submenuCName?: string,
+  holderCName?: string
+  submenuCName?: string
   headerSubmenu?: SubNavItem[]
   megamenuCName?: string
   headerMegamenu?: Megamenu[]
@@ -42,14 +42,14 @@ export type SidebarNavItem = {
   icon?: keyof typeof Icons
 } & (
   | {
-  href: string
-  items?: never
-}
+      href: string
+      items?: never
+    }
   | {
-  href?: string
-  items: NavLink[]
-}
-  )
+      href?: string
+      items: NavLink[]
+    }
+)
 
 export type SiteConfig = {
   name: string
@@ -92,7 +92,7 @@ export type SubscriptionPlan = {
 }
 
 export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<User, "stripeCustomerId" | "stripeSubscriptionId"> & {
-  stripeCurrentPeriodEnd: number
-  isPro: boolean
-}
+  Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId'> & {
+    stripeCurrentPeriodEnd: number
+    isPro: boolean
+  }

@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth/next"
-import { z } from "zod"
+import { getServerSession } from 'next-auth/next'
+import { z } from 'zod'
 
-import { authOptions } from "@/lib/auth"
-import { db } from "@/lib/db"
-import { userNameSchema } from "@/lib/validations/user"
+import { authOptions } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { userNameSchema } from '@/lib/validations/user'
 
 const routeContextSchema = z.object({
   params: z.object({
@@ -13,7 +13,7 @@ const routeContextSchema = z.object({
 
 export async function PATCH(
   req: Request,
-  context: z.infer<typeof routeContextSchema>
+  context: z.infer<typeof routeContextSchema>,
 ) {
   try {
     // Validate the route context.

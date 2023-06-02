@@ -1,18 +1,19 @@
-import {IoCloseOutline, IoSearchOutline} from 'react-icons/io5';
-import {categoryList} from "@/config/header-menu";
+import { IoCloseOutline, IoSearchOutline } from 'react-icons/io5'
+import { categoryList } from '@/config/header-menu'
 
 interface FullscreenSearchBarProp {
   fullscreenSearch: boolean
   showFullscreenSearch: () => void
 }
 
-const FullscreenSearchBar = ({showFullscreenSearch, fullscreenSearch}: FullscreenSearchBarProp) => {
+const FullscreenSearchBar = ({
+  showFullscreenSearch,
+  fullscreenSearch,
+}: FullscreenSearchBarProp) => {
   return (
     <div
       className={
-        fullscreenSearch
-          ? 'fullscreen-search active'
-          : 'fullscreen-search'
+        fullscreenSearch ? 'fullscreen-search active' : 'fullscreen-search'
       }
     >
       <div className="homebox-container mx-auto xl:w-[1170px]">
@@ -46,14 +47,14 @@ const FullscreenSearchBar = ({showFullscreenSearch, fullscreenSearch}: Fullscree
                 type="submit"
                 className="absolute right-[15px] top-auto h-[40px] text-[20px] transition-all hover:text-primary"
               >
-                <IoSearchOutline/>
+                <IoSearchOutline />
               </button>
             </div>
           </div>
         </form>
       </div>
     </div>
-  );
+  )
 }
 
 export default FullscreenSearchBar

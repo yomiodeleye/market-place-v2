@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth"
-import * as z from "zod"
+import { getServerSession } from 'next-auth'
+import * as z from 'zod'
 
-import { authOptions } from "@/lib/auth"
-import { db } from "@/lib/db"
-import { postPatchSchema } from "@/lib/validations/post"
+import { authOptions } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { postPatchSchema } from '@/lib/validations/post'
 
 const routeContextSchema = z.object({
   params: z.object({
@@ -13,7 +13,7 @@ const routeContextSchema = z.object({
 
 export async function DELETE(
   req: Request,
-  context: z.infer<typeof routeContextSchema>
+  context: z.infer<typeof routeContextSchema>,
 ) {
   try {
     // Validate the route params.
@@ -43,7 +43,7 @@ export async function DELETE(
 
 export async function PATCH(
   req: Request,
-  context: z.infer<typeof routeContextSchema>
+  context: z.infer<typeof routeContextSchema>,
 ) {
   try {
     // Validate route params.

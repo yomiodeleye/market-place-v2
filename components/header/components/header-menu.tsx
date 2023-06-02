@@ -1,21 +1,26 @@
-import Link from 'next/link';
-import {tHeaderMenu} from "@/types";
+import Link from 'next/link'
+import { tHeaderMenu } from '@/types'
 
 interface HeaderMenuProps {
   headerItems: tHeaderMenu
   differentPositionCName: string
 }
 
-const HeaderMenu = ({headerItems, differentPositionCName}: HeaderMenuProps) => {
-
-  const {headerMenu} = headerItems
+const HeaderMenu = ({
+  headerItems,
+  differentPositionCName,
+}: HeaderMenuProps) => {
+  const { headerMenu } = headerItems
 
   return (
     <div className={`${differentPositionCName} header-menu`}>
       <nav>
         <ul className="flex justify-center">
           {headerMenu.map((menuOne) => (
-            <li className={`${menuOne.holderCName} mr-[55px] py-[50px] last:mr-0`} key={menuOne.id}>
+            <li
+              className={`${menuOne.holderCName} mr-[55px] py-[50px] last:mr-0`}
+              key={menuOne.id}
+            >
               <Link href={menuOne.href}>{menuOne.title}</Link>
               {/*{menuOne.submenuCName && !menuOne.megamenuCName && (*/}
               {/*  <ul className={`${menuOne.submenuCName}`}>*/}

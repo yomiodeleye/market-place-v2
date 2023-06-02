@@ -14,7 +14,7 @@
     "lint": "next lint",
     "preview": "next build && next start",
     "postinstall": "prisma generate",
-    "commit": "pnpm pre-commit & cz",
+    "commit": "cz",
     "prepare": "husky install",
     "pre-commit": "pnpm format & pnpm lint --fix",
     "format": "prettier --ignore-path .prettierignore --write \"**/*.{js,jsx,ts,tsx,json,md}\""

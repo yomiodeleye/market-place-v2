@@ -13,9 +13,9 @@ interface HomeLayoutProps {
 export default async function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <>
-    <div className="home-collection relative bg-white sm:mb-[745px] lg:mb-[515px]">
-      {children}
-    </div>
+      <div className="home-collection relative bg-white sm:mb-[745px] lg:mb-[515px]">
+        {children}
+      </div>
     </>
     // <div className="flex min-h-screen flex-col">
     //   <header className="container z-40 bg-background">
