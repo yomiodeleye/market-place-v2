@@ -1,0 +1,5 @@
+export { default as Hero } from './hero'
+export { default as HeroOne } from './hero-one'
+export { default as HeroTwo } from './hero-two'
+export { default as HeroThree } from './hero-three'
+export { default as HeroFour } from './hero-four'
