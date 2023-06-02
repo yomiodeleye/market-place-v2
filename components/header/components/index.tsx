@@ -1,2 +1,5 @@
 export {default as Logo} from './logo'
 export {default as HeaderMenu} from './header-menu'
+export {default as HeaderRight} from './header-right'
+export {default as OffcanvasComps} from './offcanvas-comps'
+export {default as FullscreenSearchBar} from './fullscreen-search-bar'

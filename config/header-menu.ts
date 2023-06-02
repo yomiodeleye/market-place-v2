@@ -191,3 +191,40 @@ export const headerMenuConfig: tHeaderMenu = {
     },
   ],
 }
+
+export const languageTitle = "Language"
+export const languageList =
+  [
+    {id: 'language-01', text: 'English', path: '/'},
+    {id: 'language-02', text: 'French', path: '/'},
+    {id: 'language-03', text: 'Arabric', path: '/'},
+  ]
+export const currencyTitle = 'Currency'
+export const currencyList =
+  [
+    {id: "currency - 01", text: 'USD - US Dollar', path: '/'},
+    {id: "currency - 02", text: 'Euro', path: '/'},
+    {id: "currency - 03", text: 'Pound', path: '/'},
+  ]
+
+export const contactInfoTitle = 'Contact Us'
+export const contactInfo = '69 Halsey St, Ny 10002, New York, United States <br/> support.center@helendo.co <br/> (0091) 8547 632521'
+export const socialTitle = 'Follow US On Socials'
+export const socialList =
+  [
+    {
+      id: 1,
+      socialIcon: 'FaFacebookF',
+      path: 'https://www.facebook.com/',
+    },
+    {id: 2, socialIcon: 'FaTwitter', path: 'https://twitter.com/'},
+    {id: 3, socialIcon: 'FaTumblr', path: 'https://www.tumblr.com/'},
+  ]
+
+export const categoryList =
+  [
+    {id: 1, title: 'All'},
+    {id: 2, title: 'Accessories'},
+    {id: 3, title: 'Decoration'},
+    {id: 4, title: 'Furniture'},
+  ]
