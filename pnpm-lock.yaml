@@ -211,6 +211,9 @@ dependencies:
   react-markdown:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.7)(react@18.2.0)
+  react-otp-input:
+    specifier: ^3.0.2
+    version: 3.0.2(react-dom@18.2.0)(react@18.2.0)
   react-portal:
     specifier: ^4.2.2
     version: 4.2.2(react-dom@18.2.0)(react@18.2.0)
@@ -3729,6 +3732,7 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
+    dev: false
 
   /available-typed-arrays@1.0.5:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
@@ -8034,6 +8038,16 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /react-otp-input@3.0.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-YzOYnol7NodV1KZdy9Y4y3jV4u3mlug98WfJqwV4hs7+zeRqzp5jcA/+onZ6OHjpdOMRQvA675xAHB5ynSmViA==}
+    peerDependencies:
+      react: '>=16.8.6 || ^17.0.0 || ^18.0.0'
+      react-dom: '>=16.8.6 || ^17.0.0 || ^18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-portal@4.2.2(react-dom@18.2.0)(react@18.2.0):

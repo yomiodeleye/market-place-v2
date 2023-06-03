@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       ref={header}
-      className="top-0 z-30 flex h-[120px] w-full items-center md:absolute"
+      className="top-0 z-30 flex h-[120px] w-full items-center"
     >
       <div className="container-fluid relative px-[15px] lg:px-[100px]">
         <div className="grid grid-cols-12">

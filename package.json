@@ -1,14 +1,10 @@
 {
-  "name": "taxonomy",
-  "version": "0.2.0",
+  "name": "market-place-2",
+  "version": "0.1.0",
   "private": true,
-  "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
-  },
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "contentlayer build && next build",
+    "dev": "next dev",
+    "build": "next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
@@ -90,6 +86,7 @@
     "react-hook-form": "^7.44.2",
     "react-icons": "^4.9.0",
     "react-markdown": "^8.0.7",
+    "react-otp-input": "^3.0.2",
     "react-portal": "^4.2.2",
     "react-redux": "^8.0.7",
     "react-textarea-autosize": "^8.4.1",

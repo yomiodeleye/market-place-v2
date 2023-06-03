@@ -29,7 +29,7 @@ function FooterCompsThree({ footerItems }) {
   }
   return (
     <footer
-      className="sm:fixed sm:inset-x-0 sm:bottom-0 sm:z-[-1] sm:w-full sm:bg-[#f4f5f7]"
+      className="sm:inset-x-0 sm:bottom-0 sm:z-[-1] sm:w-full sm:bg-[#f4f5f7]"
       ref={footer}
     >
       <div className="footer-top py-[50px] md:py-[75px] lg:py-[95px] xl:py-[115px]">
