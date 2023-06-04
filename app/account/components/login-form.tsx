@@ -47,6 +47,12 @@ function LoginForm({}: LoginFormProps) {
                 Login
               </button>
             </div>
+            <p className="mb-[25px] mt-[20px] text-center lg:max-w-[495px]">
+              Don't have an account?
+              <Link href="/account/register" className="ml-[5px]">
+                Sign up here
+              </Link>
+            </p>
           </form>
         </div>
       </div>
