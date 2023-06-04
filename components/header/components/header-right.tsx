@@ -52,7 +52,7 @@ const HeaderRight = ({}) => {
       <div className="flex justify-end">
         <div className="user-item mr-[15px] sm:mr-[25px] md:mr-[35px]">
           <Link
-            href="/auth"
+            href="/account/login"
             className="text-2xl transition-all hover:text-primary"
           >
             <IoPersonOutline />
