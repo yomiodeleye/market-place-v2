@@ -7,6 +7,7 @@ import * as z from 'zod'
 
 import { userAuthSchema, userRegisterSchema } from '@/lib/auth'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useRouter } from 'next/navigation'
 
 const inputField = `border border-[#cccccc] focus-visible:outline-0 text-[#666666] py-[10px] px-[20px] w-full h-[50px]`
 const secondaryButton =
@@ -27,6 +28,7 @@ function LoginForm({}: LoginFormProps) {
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const { push } = useRouter()
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true)
@@ -36,6 +38,7 @@ function LoginForm({}: LoginFormProps) {
         password: data.password,
       })
       setIsLoading(false)
+      push('/account')
     } catch (error) {
       setErrorMessage(error)
     }
@@ -71,7 +74,7 @@ function LoginForm({}: LoginFormProps) {
                   ></path>
                 </svg>
                 <div className="ml-3 text-sm font-medium">
-                  {errorMessage.messaga}
+                  {errorMessage?.messaga}
                 </div>
                 <button
                   type="button"

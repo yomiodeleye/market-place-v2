@@ -9,7 +9,6 @@ interface LoginPageProps {}
 function RegisterPage({}: LoginPageProps) {
   return (
     <>
-      <Header />
       <Breadcrumb
         breadcrumbContainer="container"
         title="Register"
@@ -18,7 +17,6 @@ function RegisterPage({}: LoginPageProps) {
         activeItem="Register"
       />
       <RegisterForm />
-      <FooterCompsThree footerItems={footerItem} />
     </>
   )
 }

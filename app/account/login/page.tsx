@@ -13,7 +13,6 @@ interface LoginPageProps {
 function LoginPage({ headerItems, authItems, footerItems }: LoginPageProps) {
   return (
     <>
-      <Header />
       <Breadcrumb
         breadcrumbContainer="container"
         title="Login"
@@ -22,7 +21,6 @@ function LoginPage({ headerItems, authItems, footerItems }: LoginPageProps) {
         activeItem="Login"
       />
       <LoginForm />
-      <FooterCompsThree footerItems={footerItem} />
     </>
   )
 }

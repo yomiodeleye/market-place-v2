@@ -252,7 +252,6 @@ function RegisterForm({}: RegisterFormProps) {
                 type="submit"
                 className={secondaryButton}
                 disabled={isLoading}
-                X
               >
                 Register
               </button>

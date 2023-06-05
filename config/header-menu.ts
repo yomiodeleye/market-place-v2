@@ -218,3 +218,46 @@ export const categoryList = [
   { id: 3, title: 'Decoration' },
   { id: 4, title: 'Furniture' },
 ]
+
+export const accountMenuConfig = [
+  {
+    id: 1,
+    title: 'ACCOUNT OVERVIEW',
+    href: '/account',
+  },
+  {
+    id: 2,
+    title: 'ORDERS',
+    href: '/account/orders',
+  },
+  {
+    id: 3,
+    title: 'RETURNS',
+    href: '/account/returns',
+  },
+  {
+    id: 4,
+    title: 'ADDRESSES',
+    href: '/account/address',
+  },
+  {
+    id: 5,
+    title: 'REWARDS',
+    href: '/account/rewards',
+  },
+  {
+    id: 6,
+    title: 'REFER A FRIEND',
+    href: '/account/refer-a-friend',
+  },
+  {
+    id: 7,
+    title: 'HELP',
+    href: '/account/help',
+  },
+  {
+    id: 8,
+    title: 'RESET',
+    href: '/account/reset',
+  },
+]

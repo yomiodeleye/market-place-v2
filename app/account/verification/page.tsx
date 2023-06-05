@@ -12,7 +12,6 @@ interface VerificationPageProps {}
 function VerificationPage({}: VerificationPageProps) {
   return (
     <>
-      <Header />
       <Breadcrumb
         breadcrumbContainer="container"
         title="Verification"
@@ -21,7 +20,6 @@ function VerificationPage({}: VerificationPageProps) {
         activeItem="Verification"
       />
       <OtpVerificationFrom />
-      <FooterCompsThree footerItems={footerItem} />
     </>
   )
 }
