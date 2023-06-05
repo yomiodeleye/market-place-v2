@@ -1,5 +1,5 @@
 'use client'
-
+import { Amplify } from 'aws-amplify'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Provider } from 'react-redux'
@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 import { Toaster } from '@/components/ui/toaster'
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ThemeProvider } from '@/components/theme-provider'
+import awsExports from '@/aws-exports'
 
 import store, { persistor } from '@/store'
 
@@ -19,11 +19,13 @@ const fontSans = FontSans({
   variable: '--font-sans',
 })
 
-// Font files can be colocated inside of `pages`
+// Font files can be colocated inside `pages`
 const fontHeading = localFont({
   src: '../assets/fonts/CalSans-SemiBold.woff2',
   variable: '--font-heading',
 })
+
+Amplify.configure({ ...awsExports, ssr: true })
 
 interface RootLayoutProps {
   children: React.ReactNode
