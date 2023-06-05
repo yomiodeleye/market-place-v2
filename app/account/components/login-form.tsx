@@ -142,7 +142,7 @@ function LoginForm({}: LoginFormProps) {
                 <span className="ml-[15px] text-[14px]">Remember me</span>
               </label>
               <Link
-                href="/lost-password"
+                href="/account/forgot-password"
                 className="text-[14px] font-normal transition-all hover:text-primary"
               >
                 Lost your password?
