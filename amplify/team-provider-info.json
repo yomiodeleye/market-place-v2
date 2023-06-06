@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "marketplace27cd804f2": {}
+      },
+      "api": {
+        "marketplaceAmplifyApi": {}
       }
     }
   }

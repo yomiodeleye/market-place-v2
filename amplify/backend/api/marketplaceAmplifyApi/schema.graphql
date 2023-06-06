@@ -1,0 +1,30 @@
+enum AddressType {
+  billing
+  postal
+}
+
+type User @model @auth(rules: [{allow: owner, ownerField: "id", operations: [read]}]) {
+  id: ID!
+  title: String
+  fist_name: String!
+  last_name: String!
+  display_name: String
+  email: AWSEmail!
+  addresses: [Address] @hasMany
+}
+
+type Address @model {
+  id: ID!
+  fist_name: String!
+  last_name: String!
+  company_name: String
+  county: String!
+  street_address: String!
+  postcode: String!
+  town: String!
+  country: String!
+  address_type: AddressType
+  user: User @belongsTo
+}
+
+
