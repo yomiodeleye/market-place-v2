@@ -114,6 +114,7 @@
     "autoprefixer": "^10.4.14",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-emoji": "1.3.2-canary.2",
     "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.4.4",
@@ -143,7 +144,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-emoji"
     }
   },
   "lint-staged": {
