@@ -1,5 +1,5 @@
-import Breadcrumb from '@/src/components/Breadcrumb'
-import LoginForm from '@/src/app/account/components/login-form'
+import Breadcrumb from '@/components/Breadcrumb'
+import LoginForm from '@/app/account/components/login-form'
 
 interface LoginPageProps {}
 

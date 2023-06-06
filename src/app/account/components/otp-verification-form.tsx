@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import OtpInput from 'react-otp-input'
-import { useLocalStorage } from '@/src/hooks/use-local-storage'
+import { useLocalStorage } from '@/hooks/use-local-storage'
 import { Auth } from 'aws-amplify'
 import { useRouter } from 'next/navigation'
 

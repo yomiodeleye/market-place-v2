@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 import { env } from '@/env.mjs'
-import { siteConfig } from '@/src/config/site'
-import { cn } from '@/src/lib/utils'
-import { buttonVariants } from '@/src/components/ui/button'
+import { siteConfig } from '@/config/site'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
 
 export default async function MarketingPage() {
   return (

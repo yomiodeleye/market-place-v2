@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { siteConfig } from '@/src/config/site'
+import { siteConfig } from '@/config/site'
 
 interface LogoProps {
   headerLogoClassName: string

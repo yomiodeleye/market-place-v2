@@ -7,9 +7,9 @@ import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 
-import { userRegisterSchema } from '@/src/lib/auth'
+import { userRegisterSchema } from '@/lib/auth'
 import awsExports from '@/aws-exports'
-import { useLocalStorage } from '@/src/hooks/use-local-storage'
+import { useLocalStorage } from '@/hooks/use-local-storage'
 
 const inputField = `border border-[#cccccc] focus-visible:outline-0 text-[#666666] py-[10px] px-[20px] w-full h-[50px]`
 const secondaryButton =

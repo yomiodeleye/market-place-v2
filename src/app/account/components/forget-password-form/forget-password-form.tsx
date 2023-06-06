@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { Auth } from 'aws-amplify'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation'
-import ForgetPasswordRequestForm from '@/src/app/account/components/forget-password-form/forget-password'
-import ForgetPasswordSubmitRequestForm from '@/src/app/account/components/forget-password-form/forget-password-submit-form'
+import ForgetPasswordRequestForm from '@/app/account/components/forget-password-form/forget-password'
+import ForgetPasswordSubmitRequestForm from '@/app/account/components/forget-password-form/forget-password-submit-form'
 
 function ForgetPasswordForm({}) {
   const [isLoading, setIsLoading] = useState<boolean>(false)

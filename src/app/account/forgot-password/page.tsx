@@ -1,5 +1,5 @@
-import Breadcrumb from '@/src/components/Breadcrumb'
-import ForgetPasswordForm from '@/src/app/account/components/forget-password-form/forget-password-form'
+import Breadcrumb from '@/components/Breadcrumb'
+import ForgetPasswordForm from '@/app/account/components/forget-password-form/forget-password-form'
 
 function ForgetPasswordPage({}) {
   return (

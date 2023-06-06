@@ -5,7 +5,7 @@ import { Amplify, Auth } from 'aws-amplify'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { userAuthSchema, userRegisterSchema } from '@/src/lib/auth'
+import { userAuthSchema, userRegisterSchema } from '@/lib/auth'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 

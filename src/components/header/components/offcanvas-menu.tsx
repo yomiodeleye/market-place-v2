@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { IoCaretDownOutline } from 'react-icons/io5'
-import { OffcanvasData } from '@/src/config/offcanvas-data'
+import { OffcanvasData } from '@/config/offcanvas-data'
 
 interface OffcanvasMenuProp {}
 

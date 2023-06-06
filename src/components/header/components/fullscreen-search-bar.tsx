@@ -1,5 +1,5 @@
 import { IoCloseOutline, IoSearchOutline } from 'react-icons/io5'
-import { categoryList } from '@/src/config/header-menu'
+import { categoryList } from '@/config/header-menu'
 
 interface FullscreenSearchBarProp {
   fullscreenSearch: boolean

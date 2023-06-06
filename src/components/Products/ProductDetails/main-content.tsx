@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { IoAddSharp, IoHeartOutline, IoRemoveSharp } from 'react-icons/io5'
 import { useDispatch } from 'react-redux'
-import { cartActions } from '@/src/store/cart/cart-slice'
-import { wishlistActions } from '@/src/store/wishlist/wishlist-slice'
+import { cartActions } from '@/store/cart/cart-slice'
+import { wishlistActions } from '@/store/wishlist/wishlist-slice'
 
 // Tailwind Related Stuff
 const soldOut = `bg-black text-white block leading-[28px] absolute top-[15px] right-[15px] px-[15px] z-[1]`

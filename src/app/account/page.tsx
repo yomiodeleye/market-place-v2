@@ -1,19 +1,29 @@
 'use client'
 
-import Breadcrumb from '@/src/components/Breadcrumb'
-import { accountMenuConfig } from '@/src/config/header-menu'
+import Breadcrumb from '@/components/Breadcrumb'
+import { accountMenuConfig } from '@/config/header-menu'
 import Link from 'next/link'
 import { Auth } from 'aws-amplify'
 import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 interface AccountPageProps {}
 
 const AccountsPage = ({}) => {
+  const [authenticated, setauthenticated] = useState(false)
   const { push } = useRouter()
   const signOut = async () => {
     await Auth.signOut()
     push('/')
   }
+
+  useEffect(() => {
+    Auth.currentAuthenticatedUser({ bypassCache: false })
+      .then((result) => {
+        setauthenticated(result)
+      })
+      .catch((err) => push('/account/login'))
+  }, [push])
 
   return (
     <>

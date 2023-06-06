@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { cn } from '@/src/lib/utils'
-import { buttonVariants } from '@/src/components/ui/button'
-import { Icons } from '@/src/components/icons'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
+import { Icons } from '@/components/icons'
 
 export const metadata = {
   title: 'Pricing',

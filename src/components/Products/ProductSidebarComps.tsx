@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { filterActions } from '@/src/store/product-filter/filter-slice'
+import { filterActions } from '@/store/product-filter/filter-slice'
 
 const textHover = `transition-all hover:text-primary`
 const swatchColor = `w-[18px] h-[18px] rounded-full inline-block cursor-pointer opacity-80`

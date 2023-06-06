@@ -1,17 +1,17 @@
 import { notFound } from 'next/navigation'
 import { allAuthors, allPosts } from 'contentlayer/generated'
 
-import { Mdx } from '@/src/components/mdx-components'
+import { Mdx } from '@/components/mdx-components'
 
-import '@/src/styles/mdx.css'
+import '@/styles/mdx.css'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { env } from '@/env.mjs'
-import { absoluteUrl, cn, formatDate } from '@/src/lib/utils'
-import { buttonVariants } from '@/src/components/ui/button'
-import { Icons } from '@/src/components/icons'
+import { absoluteUrl, cn, formatDate } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
+import { Icons } from '@/components/icons'
 
 interface PostPageProps {
   params: {

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import { IoCloseOutline } from 'react-icons/io5'
-import { cartActions } from '@/src/store/cart/cart-slice'
+import { cartActions } from '@/store/cart/cart-slice'
 
 function CartItem({ item }) {
   const dispatch = useDispatch()

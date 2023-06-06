@@ -1,11 +1,11 @@
 'use client'
 
-import { Header } from '@/src/components/header'
-import { footerItem } from '@/src/config/footer-data'
-import FooterCompsThree from '@/src/components/FooterComps/index-3'
-import Breadcrumb from '@/src/components/Breadcrumb'
-import RegisterForm from '@/src/app/account/components/register-form'
-import OtpVerificationFrom from '@/src/app/account/components/otp-verification-form'
+import { Header } from '@/components/header'
+import { footerItem } from '@/config/footer-data'
+import FooterCompsThree from '@/components/FooterComps/index-3'
+import Breadcrumb from '@/components/Breadcrumb'
+import RegisterForm from '@/app/account/components/register-form'
+import OtpVerificationFrom from '@/app/account/components/otp-verification-form'
 
 interface VerificationPageProps {}
 

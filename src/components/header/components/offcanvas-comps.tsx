@@ -1,7 +1,7 @@
 import { IoCloseOutline } from 'react-icons/io5'
 import Link from 'next/link'
 import * as FaIcons from 'react-icons/fa'
-import OffcanvasMenu from '@/src/components/header/components/offcanvas-menu'
+import OffcanvasMenu from '@/components/header/components/offcanvas-menu'
 import {
   contactInfo,
   contactInfoTitle,
@@ -11,7 +11,7 @@ import {
   languageTitle,
   socialList,
   socialTitle,
-} from '@/src/config/header-menu'
+} from '@/config/header-menu'
 
 interface OffcanvasCompsProps {
   offcanvas: boolean

@@ -8,7 +8,7 @@ import {
   IoAddSharp,
   IoRemoveSharp,
 } from 'react-icons/io5'
-import { cartActions } from '@/src/store/cart/cart-slice'
+import { cartActions } from '@/store/cart/cart-slice'
 import EmptyCart from './EmptyCart'
 
 const qtybutton = `cursor-pointer text-center absolute`

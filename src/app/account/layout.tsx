@@ -1,6 +1,6 @@
-import { Header } from '@/src/components/header'
-import { footerItem } from '@/src/config/footer-data'
-import FooterCompsThree from '@/src/components/FooterComps/index-3'
+import { Header } from '@/components/header'
+import { footerItem } from '@/config/footer-data'
+import FooterCompsThree from '@/components/FooterComps/index-3'
 
 interface AuthLayoutProps {
   children: React.ReactNode

@@ -1,5 +1,5 @@
-import SwiperComps, { Slide } from '@/src/components/hero/components/SwiperComps'
-import ProductItem from '@/src/components/Products/ProductItem'
+import SwiperComps, { Slide } from '@/components/hero/components/SwiperComps'
+import ProductItem from '@/components/Products/ProductItem'
 
 interface BestSellingProductsProps {
   products: any

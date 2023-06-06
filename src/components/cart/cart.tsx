@@ -2,7 +2,7 @@ import { IoCloseOutline } from 'react-icons/io5'
 import { useSelector } from 'react-redux'
 import Link from 'next/link'
 import { RootState } from 'src/store'
-import CartItem from '@/src/components/cart/components/cart-item'
+import CartItem from '@/components/cart/components/cart-item'
 
 interface CartProps {
   minicart: boolean

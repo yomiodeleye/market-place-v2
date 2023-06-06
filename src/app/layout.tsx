@@ -5,11 +5,11 @@ import localFont from 'next/font/local'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import '@/src/styles/globals.css'
-import { cn } from '@/src/lib/utils'
-import { Toaster } from '@/src/components/ui/toaster'
-import { Analytics } from '@/src/components/analytics'
-import { TailwindIndicator } from '@/src/components/tailwind-indicator'
+import '@/styles/globals.css'
+import { cn } from '@/lib/utils'
+import { Toaster } from '@/components/ui/toaster'
+import { Analytics } from '@/components/analytics'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
 import awsExports from '@/aws-exports'
 
 import store, { persistor } from 'src/store'
@@ -35,13 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body
-        className={cn(
-          'bg-background min-h-screen font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable,
-        )}
-      >
+      <body>
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
             {children}

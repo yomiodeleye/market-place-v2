@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { IoCloseOutline } from 'react-icons/io5'
-import { tCartItem } from '@/src/types/cart'
-import { cartActions } from '@/src/store/cart/cart-slice'
+import { tCartItem } from '@/types/cart'
+import { cartActions } from '@/store/cart/cart-slice'
 
 interface CartItemProp {
   item: tCartItem

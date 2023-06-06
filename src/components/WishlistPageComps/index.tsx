@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { IoCloseOutline } from 'react-icons/io5'
-import { wishlistActions } from '@/src/store/wishlist/wishlist-slice'
+import { wishlistActions } from '@/store/wishlist/wishlist-slice'
 import EmptyWishlist from './EmptyWishlist'
 
 function WishlistPageComps({ wishlistPageItems }) {

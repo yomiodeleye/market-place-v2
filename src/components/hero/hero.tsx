@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { IoArrowForwardOutline } from 'react-icons/io5'
 import { motion } from 'framer-motion'
-import SwiperComps, { Slide } from '@/src/components/hero/components/SwiperComps'
-import { heroCollection } from '@/src/config/hero-collection'
+import SwiperComps, { Slide } from '@/components/hero/components/SwiperComps'
+import { heroCollection } from '@/config/hero-collection'
 
 interface HeroProps {
   btnText: string

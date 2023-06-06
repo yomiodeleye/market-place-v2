@@ -2,7 +2,7 @@ import { IoCloseOutline } from 'react-icons/io5'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { filterActions } from '@/src/store/product-filter/filter-slice'
+import { filterActions } from '@/store/product-filter/filter-slice'
 
 function ProductActiveFilter() {
   const dispatch = useDispatch()

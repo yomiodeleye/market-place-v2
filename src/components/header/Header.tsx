@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import { HeaderMenu, HeaderRight, Logo } from '@/src/components/header/components'
-import { headerMenuConfig } from '@/src/config/header-menu'
+import { HeaderMenu, HeaderRight, Logo } from '@/components/header/components'
+import { headerMenuConfig } from '@/config/header-menu'
 
 const Header = () => {
   // Header Sticky Activation

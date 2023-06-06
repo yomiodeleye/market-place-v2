@@ -13,8 +13,8 @@ import {
 import {
   FullscreenSearchBar,
   OffcanvasComps,
-} from '@/src/components/header/components/index'
-import { Cart } from '@/src/components/cart'
+} from '@/components/header/components/index'
+import { Cart } from '@/components/cart'
 import Link from 'next/link'
 
 const badge =

@@ -10,10 +10,10 @@ import {
 } from 'react-icons/io5'
 import { useDispatch } from 'react-redux'
 
-import { cartActions } from '@/src/store/cart/cart-slice'
-import { filterActions } from '@/src/store/product-filter/filter-slice'
-import { wishlistActions } from '@/src/store/wishlist/wishlist-slice'
-import QuickView from '@/src/components/QuickView'
+import { cartActions } from '@/store/cart/cart-slice'
+import { filterActions } from '@/store/product-filter/filter-slice'
+import { wishlistActions } from '@/store/wishlist/wishlist-slice'
+import QuickView from '@/components/QuickView'
 
 // Tailwind Related Stuff
 const addAction =
