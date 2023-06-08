@@ -63,6 +63,7 @@
     "@vercel/og": "^0.5.6",
     "autoprefixer": "^10.4.14",
     "aws-amplify": "^5.2.4",
+    "aws-sdk": "^2.1393.0",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
