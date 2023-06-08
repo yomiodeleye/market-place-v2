@@ -1,16 +1,11 @@
 'use client'
-import { Amplify } from 'aws-amplify'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
+// import { PersistGate } from 'redux-persist/integration/react'
 
 import '@/styles/globals.css'
-import { cn } from '@/lib/utils'
-import { Toaster } from '@/components/ui/toaster'
-import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import awsExports from '@/aws-exports'
 
 import store, { persistor } from 'src/store'
 
@@ -25,8 +20,6 @@ const fontHeading = localFont({
   variable: '--font-heading',
 })
 
-Amplify.configure({ ...awsExports, ssr: true })
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -37,12 +30,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body>
         <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            {children}
-            <Analytics />
-            <Toaster />
-            <TailwindIndicator />
-          </PersistGate>
+          {/*<PersistGate loading={null} persistor={persistor}>*/}
+          {children}
+          <TailwindIndicator />
+          {/*</PersistGate>*/}
         </Provider>
       </body>
     </html>

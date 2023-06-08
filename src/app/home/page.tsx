@@ -14,19 +14,19 @@ import FooterCompsThree from '@/components/FooterComps/index-3'
 export default async function IndexPage() {
   return (
     <>
-      <Header />
-      <Hero btnText="Shop Now" />
-      <FeaturedProduct featuredProduct={featureProduct} />
-      <BestSellingProduct
-        products={products}
-        productFilter={productFilter}
-        sectionTitle="Best Selling"
-        productFilterPath="left-sidebar"
-      />
-      <OfferColection offerColection={offerCollection} />
-      <LatestBlog blogs={blogData} sectionTitle="Our Blog" />
-      <NewsletterComps sectionTitle="Our Newsletter" />
-      <FooterCompsThree footerItems={footerItem} />
+      {/*<Header />*/}
+      {/*<Hero btnText="Shop Now" />*/}
+      {/*<FeaturedProduct featuredProduct={featureProduct} />*/}
+      {/*<BestSellingProduct*/}
+      {/*  products={products}*/}
+      {/*  productFilter={productFilter}*/}
+      {/*  sectionTitle="Best Selling"*/}
+      {/*  productFilterPath="left-sidebar"*/}
+      {/*/>*/}
+      {/*<OfferColection offerColection={offerCollection} />*/}
+      {/*<LatestBlog blogs={blogData} sectionTitle="Our Blog" />*/}
+      {/*<NewsletterComps sectionTitle="Our Newsletter" />*/}
+      {/*<FooterCompsThree footerItems={footerItem} />*/}
     </>
   )
 }
