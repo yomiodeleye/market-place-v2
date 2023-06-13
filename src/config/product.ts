@@ -8,7 +8,7 @@ export const featureProduct = [
     image: '/images/featured-product/nancy-chair.png',
     altImage: 'Featured Product Image',
     path: '/products/nancy-chair',
-    buttonText: 'Only $90',
+    buttonText: 'Only $90'
   },
   {
     id: 'featured-product-02',
@@ -19,7 +19,7 @@ export const featureProduct = [
     image: '/images/featured-product/table-wood-pine.png',
     altImage: 'Featured Product Image',
     path: '/products/table-wood-pine',
-    buttonText: 'Only $50',
+    buttonText: 'Only $50'
   },
   {
     id: 'featured-product-03',
@@ -30,8 +30,8 @@ export const featureProduct = [
     image: '/images/featured-product/art-deco-home.png',
     altImage: 'Featured Product Image',
     path: '/products/art-deco-home',
-    buttonText: 'Only $30',
-  },
+    buttonText: 'Only $30'
+  }
 ]
 
 export const products = [
@@ -52,7 +52,7 @@ export const products = [
     color: 'green',
     tag: 'accessories',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'art-deco-home',
@@ -72,7 +72,7 @@ export const products = [
     color: 'yellow',
     tag: 'deco',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'artificial-potted-plant',
@@ -92,7 +92,7 @@ export const products = [
     color: 'black',
     tag: 'deco',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'dark-green-jug',
@@ -115,7 +115,7 @@ export const products = [
     color: 'green',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'drinking-glasses',
@@ -135,7 +135,7 @@ export const products = [
     color: 'yellow',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'helen-chair',
@@ -158,7 +158,7 @@ export const products = [
     color: 'yellow',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'high-quality-glass-bottle',
@@ -180,7 +180,7 @@ export const products = [
     color: 'black',
     tag: 'glass',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'living-room-bedroom-lights',
@@ -199,7 +199,7 @@ export const products = [
     color: 'gray',
     tag: 'accessories',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'nancy-chair',
@@ -219,7 +219,7 @@ export const products = [
     color: 'black',
     tag: 'chair',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'simple-chair',
@@ -239,7 +239,7 @@ export const products = [
     color: 'yellow',
     tag: 'chair',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'smooth-disk',
@@ -258,7 +258,7 @@ export const products = [
     color: 'yellow',
     tag: 'accessories',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'table-black',
@@ -278,7 +278,7 @@ export const products = [
     color: 'black',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'table-wood-pine',
@@ -298,7 +298,7 @@ export const products = [
     color: 'red',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'teapot-with-black-tea',
@@ -317,7 +317,7 @@ export const products = [
     color: 'black',
     tag: 'accessories',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'unique-decoration',
@@ -336,7 +336,7 @@ export const products = [
     color: 'red',
     tag: 'deco',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'vase-of-flowers',
@@ -356,7 +356,7 @@ export const products = [
     color: 'gray',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'wood-eggs',
@@ -376,7 +376,7 @@ export const products = [
     color: 'yellow',
     tag: 'table',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'wooden-box',
@@ -396,7 +396,7 @@ export const products = [
     color: 'red',
     tag: 'accessories',
     isFeatured: true,
-    content: '',
+    content: ''
   },
   {
     slug: 'wooden-cups',
@@ -416,26 +416,26 @@ export const products = [
     color: 'green',
     tag: 'table',
     isFeatured: true,
-    content: '',
-  },
+    content: ''
+  }
 ]
 
 export const productFilter = [
   {
-    slug: 'product-filter-info',
+    slug: 'product-fidlter-info',
     categoryList: [
       {
         id: 'categoryList-01',
-        categoryListTitle: 'accessory',
+        categoryListTitle: 'accessory'
       },
       {
         id: 'categoryList-02',
-        categoryListTitle: 'decoration',
+        categoryListTitle: 'decoration'
       },
       {
         id: 'categoryList-03',
-        categoryListTitle: 'furniture',
-      },
+        categoryListTitle: 'furniture'
+      }
     ],
     availabilityList: [
       {
@@ -445,7 +445,7 @@ export const productFilter = [
         name: 'In stock',
         checked: 'in-stock',
         key: 'in-stock',
-        group: 'availability',
+        group: 'availability'
       },
       {
         id: 'availabilityList-02',
@@ -454,8 +454,8 @@ export const productFilter = [
         name: 'Out of stock',
         checked: 'out-of-stock',
         key: 'out-of-stock',
-        group: 'availability',
-      },
+        group: 'availability'
+      }
     ],
     productSizeList: [
       {
@@ -465,7 +465,7 @@ export const productFilter = [
         name: 'Large',
         checked: 'large',
         key: 'large',
-        group: 'size',
+        group: 'size'
       },
       {
         id: 'size-02',
@@ -474,7 +474,7 @@ export const productFilter = [
         name: 'Medium',
         checked: 'medium',
         key: 'medium',
-        group: 'size',
+        group: 'size'
       },
       {
         id: 'size-03',
@@ -483,58 +483,58 @@ export const productFilter = [
         name: 'Small',
         checked: 'small',
         key: 'small',
-        group: 'size',
-      },
+        group: 'size'
+      }
     ],
     colorList: [
       {
         id: 'color-01',
-        colorOption: 'black',
+        colorOption: 'black'
       },
       {
         id: 'color-02',
-        colorOption: 'green',
+        colorOption: 'green'
       },
       {
         id: 'color-03',
-        colorOption: 'gray',
+        colorOption: 'gray'
       },
       {
         id: 'color-04',
-        colorOption: 'red',
+        colorOption: 'red'
       },
       {
         id: 'color-05',
-        colorOption: 'yellow',
-      },
+        colorOption: 'yellow'
+      }
     ],
     tagList: [
       {
         id: 'tag-01',
         tagTitle: 'accessories',
-        marginRight: 'mr-[10px]',
+        marginRight: 'mr-[10px]'
       },
       {
         id: 'tag-02',
         tagTitle: 'chair',
-        marginRight: 'mr-[10px]',
+        marginRight: 'mr-[10px]'
       },
       {
         id: 'tag-03',
         tagTitle: 'glass',
-        marginRight: 'mr-[10px]',
+        marginRight: 'mr-[10px]'
       },
       {
         id: 'tag-04',
         tagTitle: 'deco',
-        marginRight: 'mr-[10px]',
+        marginRight: 'mr-[10px]'
       },
       {
         id: 'tag-05',
         tagTitle: 'table',
-        marginRight: '',
-      },
+        marginRight: ''
+      }
     ],
-    content: '',
-  },
+    content: ''
+  }
 ]

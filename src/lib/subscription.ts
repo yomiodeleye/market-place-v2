@@ -1,22 +1,22 @@
 // @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
-import { UserSubscriptionPlan } from 'src/types'
+import { UserSubscriptionPlan } from '../../../src/types'
 import { freePlan, proPlan } from '@/config/subscriptions'
 import { db } from '@/lib/db'
 
 export async function getUserSubscriptionPlan(
-  userId: string,
+  userId: string
 ): Promise<UserSubscriptionPlan> {
   const user = await db.user.findFirst({
     where: {
-      id: userId,
+      id: userId
     },
     select: {
       stripeSubscriptionId: true,
       stripeCurrentPeriodEnd: true,
       stripeCustomerId: true,
-      stripePriceId: true,
-    },
+      stripePriceId: true
+    }
   })
 
   if (!user) {
@@ -34,6 +34,6 @@ export async function getUserSubscriptionPlan(
     ...plan,
     ...user,
     stripeCurrentPeriodEnd: user.stripeCurrentPeriodEnd?.getTime(),
-    isPro,
+    isPro
   }
 }

@@ -8,7 +8,7 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-  persistStore,
+  persistStore
 } from 'redux-persist'
 import filterSlice from './product-filter/filter-slice'
 import cartSlice from './cart/cart-slice'
@@ -16,25 +16,26 @@ import wishlistSlice from './wishlist/wishlist-slice'
 
 const persistConfig = {
   key: 'root',
-  storage,
+  version: 1,
+  storage
 }
 
 const reducer = combineReducers({
   cart: cartSlice.reducer,
   filter: filterSlice.reducer,
-  wishlist: wishlistSlice.reducer,
+  wishlist: wishlistSlice.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+      }
+    })
 })
 
 export type RootState = ReturnType<typeof store.getState>

@@ -1,14 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { HYDRATE } from 'next-redux-wrapper'
 
 const filterSlice = createSlice({
   name: 'filter',
   initialState: {
-    filterData: [],
+    filterData: []
   },
   reducers: {
     addFilter(state, { payload }) {
       const itemIndex = state.filterData.findIndex(
-        (item: any) => item.group === payload.group && item.key === payload.key,
+        (item: any) => item.group === payload.group && item.key === payload.key
       )
       if (itemIndex === -1) {
         // @ts-ignore
@@ -22,14 +23,14 @@ const filterSlice = createSlice({
     removeFilter(state, action) {
       const { key } = action.payload
       state.filterData = state.filterData.filter(
-        (singleData: any) => singleData.key !== key,
+        (singleData: any) => singleData.key !== key
       )
     },
 
     clearAll(state) {
       state.filterData = []
-    },
-  },
+    }
+  }
 })
 
 export const filterActions = filterSlice.actions

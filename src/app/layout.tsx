@@ -1,41 +1,38 @@
-'use client'
-import { Inter as FontSans } from 'next/font/google'
-import localFont from 'next/font/local'
-import { Provider } from 'react-redux'
-// import { PersistGate } from 'redux-persist/integration/react'
+import { ClerkProvider } from '@clerk/nextjs/app-beta'
+import { Inter } from 'next/font/google'
 
-import '@/styles/globals.css'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
+import './globals.css'
+import Footer from '@/app/components/layout/footer'
+import { Header } from '@/components/layout/header'
+import { footerItem } from '@/config/footer-data'
+import FooterCompsThree from '@/components/FooterComps/index-3'
 
-import store, { persistor } from 'src/store'
-
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
+const inter = Inter({
+  subsets: ['latin']
 })
 
-// Font files can be colocated inside `pages`
-const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-heading',
-})
-
-interface RootLayoutProps {
-  children: React.ReactNode
+export const metadata = {
+  title: 'next ecommerce',
+  description: 'Created by Hamed Bahram'
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout = ({ children }) => {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body>
-        <Provider store={store}>
-          {/*<PersistGate loading={null} persistor={persistor}>*/}
-          {children}
-          <TailwindIndicator />
-          {/*</PersistGate>*/}
-        </Provider>
+    <html
+      lang='en'
+      className={`${inter.className} h-full scroll-smooth antialiased`}
+    >
+      <body className='flex h-full flex-col text-stone-700'>
+        <ClerkProvider>
+          <Header />
+          <main className='relative bg-white'>{children}</main>
+          <FooterCompsThree footerItems={footerItem} />
+          <div id='quickview-root' />
+          <div id='notification-root' />
+        </ClerkProvider>
       </body>
     </html>
   )
 }
+
+export default RootLayout

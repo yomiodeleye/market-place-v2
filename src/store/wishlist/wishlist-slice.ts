@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { HYDRATE } from 'next-redux-wrapper'
 
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState: {
     items: [],
     totalQuantity: 0,
-    changed: false,
+    changed: false
   },
   reducers: {
     replaceWishlist(state, action) {
@@ -14,7 +15,7 @@ const wishlistSlice = createSlice({
     },
     addItemToWishlist(state, action) {
       const newItem = action.payload
-      const existingItem = state.items.find((item) => item.id === newItem.id)
+      const existingItem = state.items.find(item => item.id === newItem.id)
       state.totalQuantity++
       state.changed = true
       if (!existingItem) {
@@ -25,7 +26,7 @@ const wishlistSlice = createSlice({
           totalPrice: newItem.price,
           name: newItem.title,
           image: newItem.image,
-          slug: newItem.slug,
+          slug: newItem.slug
         })
       } else {
         existingItem.quantity++
@@ -36,23 +37,23 @@ const wishlistSlice = createSlice({
       const id = action.payload
 
       state.changed = true
-      state.items = state.items.filter((item) => item.id !== id)
+      state.items = state.items.filter(item => item.id !== id)
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0,
+        0
       )
     },
     updateItemQuantityFromWishlist(state, action) {
       const newQuantity = action.payload
 
-      state.items = state.items.map((item) => ({
+      state.items = state.items.map(item => ({
         ...item,
         quantity: newQuantity[item.id] || item.quantity,
-        totalPrice: item.price * newQuantity[item.id] || item.price,
+        totalPrice: item.price * newQuantity[item.id] || item.price
       }))
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0,
+        0
       )
       state.changed = true
     },
@@ -60,8 +61,8 @@ const wishlistSlice = createSlice({
       state.changed = true
       state.items = []
       state.totalQuantity = 0
-    },
-  },
+    }
+  }
 })
 
 export const wishlistActions = wishlistSlice.actions

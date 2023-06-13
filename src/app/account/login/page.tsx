@@ -1,21 +1,25 @@
 import Breadcrumb from '@/components/Breadcrumb'
-import LoginForm from '@/app/account/components/login-form'
+import { SignIn } from '@clerk/nextjs/app-beta'
 
-interface LoginPageProps {}
-
-function LoginPage({}: LoginPageProps) {
+const LoginPage = async ({ searchParams }) => {
+  const { redirectUrl } = searchParams
   return (
     <>
       <Breadcrumb
-        breadcrumbContainer="container"
-        title="Login"
-        item="Home"
-        itemPath="/"
-        activeItem="Login"
+        breadcrumbContainer='container'
+        title='Login'
+        item='Home'
+        itemPath='/'
+        activeItem='Login'
       />
-      <LoginForm />
+      <div className='border-b border-[#ededed] pt-[50px] md:pt-[80px] lg:pt-[100px] xl:py-[155px]'>
+        <div className='container md:max-w-lg'>
+          <div className='login-content tab-style-common active'>
+            <SignIn redirectUrl={redirectUrl || '/'} />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
-
 export default LoginPage

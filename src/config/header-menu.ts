@@ -1,4 +1,4 @@
-import { tHeaderMenu } from 'src/types'
+import { tHeaderMenu } from '@/types'
 
 export const headerMenuConfig: tHeaderMenu = {
   headerMenu: [
@@ -12,29 +12,29 @@ export const headerMenuConfig: tHeaderMenu = {
         {
           id: 'home-default',
           submenuTitle: 'Home V1 – Default',
-          submenuPath: '/',
+          submenuPath: '/'
         },
         {
           id: 'home-boxed',
           submenuTitle: 'Home V2 – Boxed',
-          submenuPath: '/home-boxed',
+          submenuPath: '/home-boxed'
         },
         {
           id: 'home-carousel',
           submenuTitle: 'Home V3 – Carousel',
-          submenuPath: '/home-carousel',
+          submenuPath: '/home-carousel'
         },
         {
           id: 'home-categories',
           submenuTitle: 'Home V4 – Categories',
-          submenuPath: '/home-categories',
+          submenuPath: '/home-categories'
         },
         {
           id: 'home-collection',
           submenuTitle: 'Home V5 – Collection',
-          submenuPath: '/home-collection',
-        },
-      ],
+          submenuPath: '/home-collection'
+        }
+      ]
     },
     {
       id: 2,
@@ -50,29 +50,29 @@ export const headerMenuConfig: tHeaderMenu = {
             {
               id: 'product-3-columns',
               megamenuTitle: 'Product 3 Columns',
-              megamenuPath: '/products/3-columns',
+              megamenuPath: '/products/3-columns'
             },
             {
               id: 'product-4-columns',
               megamenuTitle: 'Product 4 Columns',
-              megamenuPath: '/products/4-columns',
+              megamenuPath: '/products/4-columns'
             },
             {
               id: 'product-5-columns',
               megamenuTitle: 'Product 5 Columns',
-              megamenuPath: '/products/5-columns',
+              megamenuPath: '/products/5-columns'
             },
             {
               id: 'product-6-columns',
               megamenuTitle: 'Product 6 Columns',
-              megamenuPath: '/products/6-columns',
+              megamenuPath: '/products/6-columns'
             },
             {
               id: 'product-categories',
               megamenuTitle: 'Product Categories',
-              megamenuPath: '/products/categories',
-            },
-          ],
+              megamenuPath: '/products/categories'
+            }
+          ]
         },
         {
           id: 'group-two',
@@ -81,19 +81,19 @@ export const headerMenuConfig: tHeaderMenu = {
             {
               id: 'product-carousel',
               megamenuTitle: 'Product Carousel',
-              megamenuPath: '/products/carousel',
+              megamenuPath: '/products/carousel'
             },
             {
               id: 'product-left-sidebar',
               megamenuTitle: 'Product Left Sidebar',
-              megamenuPath: '/products/left-sidebar',
+              megamenuPath: '/products/left-sidebar'
             },
             {
               id: 'product-right-sidebar',
               megamenuTitle: 'Product Right Sidebar',
-              megamenuPath: '/products/right-sidebar',
-            },
-          ],
+              megamenuPath: '/products/right-sidebar'
+            }
+          ]
         },
         {
           id: 'related-product',
@@ -102,27 +102,27 @@ export const headerMenuConfig: tHeaderMenu = {
             {
               id: 'cart',
               megamenuTitle: 'Cart',
-              megamenuPath: '/cart',
+              megamenuPath: '/cart'
             },
             {
               id: 'checkout',
               megamenuTitle: 'Checkout',
-              megamenuPath: '/checkout',
+              megamenuPath: '/checkout'
             },
             {
               id: 'auth',
               megamenuTitle: 'Auth',
-              megamenuPath: '/auth',
+              megamenuPath: '/auth'
             },
             {
               id: 'wishlist',
               megamenuTitle: 'Wishlist',
-              megamenuPath: '/wishlist',
-            },
-          ],
+              megamenuPath: '/wishlist'
+            }
+          ]
         },
-        { id: 'empty-list', groupName: '', groupItems: [] },
-      ],
+        { id: 'empty-list', groupName: '', groupItems: [] }
+      ]
     },
     {
       id: 3,
@@ -134,24 +134,24 @@ export const headerMenuConfig: tHeaderMenu = {
         {
           id: 'about',
           submenuTitle: 'About Us',
-          submenuPath: '/about',
+          submenuPath: '/about'
         },
         {
           id: 'contact',
           submenuTitle: 'Contact',
-          submenuPath: '/contact',
+          submenuPath: '/contact'
         },
         {
           id: 'faq',
           submenuTitle: 'FAQ Page',
-          submenuPath: '/faq',
+          submenuPath: '/faq'
         },
         {
           id: 'coming-soon',
           submenuTitle: 'Coming Soon',
-          submenuPath: '/coming-soon',
-        },
-      ],
+          submenuPath: '/coming-soon'
+        }
+      ]
     },
     {
       id: 4,
@@ -163,39 +163,39 @@ export const headerMenuConfig: tHeaderMenu = {
         {
           id: 'default',
           submenuTitle: 'Blog Default',
-          submenuPath: '/blogs/default',
+          submenuPath: '/blogs/default'
         },
         {
           id: 'list',
           submenuTitle: 'Blog List',
-          submenuPath: '/blogs/list',
+          submenuPath: '/blogs/list'
         },
         {
           id: 'masonry',
           submenuTitle: 'Blog Masonry',
-          submenuPath: '/blogs/masonry',
+          submenuPath: '/blogs/masonry'
         },
         {
           id: 'sidebar',
           submenuTitle: 'Blog Sidebar',
-          submenuPath: '/blogs/sidebar',
-        },
-      ],
-    },
-  ],
+          submenuPath: '/blogs/sidebar'
+        }
+      ]
+    }
+  ]
 }
 
 export const languageTitle = 'Language'
 export const languageList = [
   { id: 'language-01', text: 'English', path: '/' },
   { id: 'language-02', text: 'French', path: '/' },
-  { id: 'language-03', text: 'Arabric', path: '/' },
+  { id: 'language-03', text: 'Arabric', path: '/' }
 ]
 export const currencyTitle = 'Currency'
 export const currencyList = [
   { id: 'currency - 01', text: 'USD - US Dollar', path: '/' },
   { id: 'currency - 02', text: 'Euro', path: '/' },
-  { id: 'currency - 03', text: 'Pound', path: '/' },
+  { id: 'currency - 03', text: 'Pound', path: '/' }
 ]
 
 export const contactInfoTitle = 'Contact Us'
@@ -206,58 +206,58 @@ export const socialList = [
   {
     id: 1,
     socialIcon: 'FaFacebookF',
-    path: 'https://www.facebook.com/',
+    path: 'https://www.facebook.com/'
   },
   { id: 2, socialIcon: 'FaTwitter', path: 'https://twitter.com/' },
-  { id: 3, socialIcon: 'FaTumblr', path: 'https://www.tumblr.com/' },
+  { id: 3, socialIcon: 'FaTumblr', path: 'https://www.tumblr.com/' }
 ]
 
 export const categoryList = [
   { id: 1, title: 'All' },
   { id: 2, title: 'Accessories' },
   { id: 3, title: 'Decoration' },
-  { id: 4, title: 'Furniture' },
+  { id: 4, title: 'Furniture' }
 ]
 
 export const accountMenuConfig = [
   {
     id: 1,
     title: 'ACCOUNT OVERVIEW',
-    href: '/account',
+    href: '/account'
   },
   {
     id: 2,
     title: 'ORDERS',
-    href: '/account/orders',
+    href: '/account/orders'
   },
   {
     id: 3,
     title: 'RETURNS',
-    href: '/account/returns',
+    href: '/account/returns'
   },
   {
     id: 4,
     title: 'ADDRESSES',
-    href: '/account/address',
+    href: '/account/address'
   },
   {
     id: 5,
     title: 'REWARDS',
-    href: '/account/rewards',
+    href: '/account/rewards'
   },
   {
     id: 6,
     title: 'REFER A FRIEND',
-    href: '/account/refer-a-friend',
+    href: '/account/refer-a-friend'
   },
   {
     id: 7,
     title: 'HELP',
-    href: '/account/help',
+    href: '/account/help'
   },
   {
     id: 8,
     title: 'RESET',
-    href: '/account/reset',
-  },
+    href: '/account/reset'
+  }
 ]

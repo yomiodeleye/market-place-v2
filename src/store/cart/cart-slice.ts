@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { HYDRATE } from 'next-redux-wrapper'
 import { tCart } from '@/types/cart'
 
 const initialState: tCart = {
   items: [],
   totalQuantity: 0,
-  changed: false,
+  changed: false
 }
 const cartSlice = createSlice({
   name: 'cart',
@@ -17,7 +18,7 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const newItem = action.payload
       const existingItem: any = state.items.find(
-        (item: any) => item.id === newItem.id,
+        (item: any) => item.id === newItem.id
       )
       const itemQuantity = newItem.quantity || 1
       state.totalQuantity += itemQuantity
@@ -30,7 +31,7 @@ const cartSlice = createSlice({
           totalPrice: newItem.price,
           name: newItem.title,
           image: newItem.image,
-          slug: newItem.slug,
+          slug: newItem.slug
         })
       } else {
         existingItem.quantity++
@@ -39,11 +40,11 @@ const cartSlice = createSlice({
     },
     increaseItemFromCart(state, action) {
       const id = action.payload
-      const existingItem: any = state.items.find((item) => item.id === id)
+      const existingItem: any = state.items.find(item => item.id === id)
       state.totalQuantity--
       state.changed = true
       if (existingItem.quantity === 1) {
-        state.items = state.items.filter((item) => item.id !== id)
+        state.items = state.items.filter(item => item.id !== id)
       } else {
         existingItem.quantity--
         existingItem.totalPrice -= existingItem.price
@@ -53,24 +54,24 @@ const cartSlice = createSlice({
       const id = action.payload
 
       state.changed = true
-      state.items = state.items.filter((item) => item.id !== id)
+      state.items = state.items.filter(item => item.id !== id)
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0,
+        0
       )
     },
     updateItemQuantityFromCart(state, action) {
       const newQuantity = action.payload
       // @ts-ignore
-      state.items = state.items.map((item) => ({
+      state.items = state.items.map(item => ({
         ...item,
         quantity: newQuantity[item.id] || item.quantity,
         // @ts-ignore
-        totalPrice: item.price * newQuantity[item.id] || item.price,
+        totalPrice: item.price * newQuantity[item.id] || item.price
       }))
       state.totalQuantity = state.items.reduce(
         (acc, cur) => acc + cur.quantity,
-        0,
+        0
       )
       state.changed = true
     },
@@ -78,8 +79,8 @@ const cartSlice = createSlice({
       state.changed = true
       state.items = []
       state.totalQuantity = 0
-    },
-  },
+    }
+  }
 })
 
 export const cartActions = cartSlice.actions

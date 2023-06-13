@@ -1,5 +1,5 @@
-import { SiteConfig } from 'src/types'
-import { env } from '@/../env.mjs'
+import { SiteConfig } from '../../../src/types'
+import { env } from '../../env.mjs'
 
 export const siteConfig: SiteConfig = {
   name: 'Taxonomy',
@@ -9,11 +9,11 @@ export const siteConfig: SiteConfig = {
   ogImage: 'https://tx.shadcn.com/og.jpg',
   links: {
     twitter: 'https://twitter.com/shadcn',
-    github: 'https://github.com/shadcn/taxonomy',
+    github: 'https://github.com/shadcn/taxonomy'
   },
   logo: {
     id: 'logo-01',
     darkLogo: '/images/logo/dark-logo.png',
-    darkLogoAlt: 'Header Logo',
-  },
+    darkLogoAlt: 'Header Logo'
+  }
 }
